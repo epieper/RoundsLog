@@ -7,7 +7,7 @@ html {
   box-sizing: inherit;
 }
 div.page label {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: bold;
 }
 fieldset.group {
@@ -16,7 +16,7 @@ fieldset.group {
 }
 fieldset.group legend {
   padding: 10px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
 }
 div.grid {
@@ -26,15 +26,15 @@ div.grid {
 }
 div.grid label {
   text-align: left;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: normal;
 }
 div.grid label:after {
   content: ":";
 }
 div.grid input {
-  font-size: 28px;
-  width: 150px;
+  font-size: 18px;
+  width: 100px;
 }
 
 div.grid input:disabled {
@@ -42,8 +42,8 @@ div.grid input:disabled {
 }
 
 div.grid .checkmark {
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
 }
 
 
@@ -58,7 +58,7 @@ div.grid .checkmark {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 36px;
+  font-size: 26px;
   width: 100%;
 }
 
