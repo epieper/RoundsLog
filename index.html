@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" >
+<link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/RoundsLog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/RoundsLog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/RoundsLog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/RoundsLog/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <script src="app.js" defer></script>
+  </head>
+<body>
+<!-- partial:index.partial.html -->
+<button type="button" class="collapsible">Fireroom</button>
+<div class="page" id="fireroom">
+  <fieldset class="group" id="auxiliaries">
+    <legend>Auxiliaries</legend>
+    <div class="grid">
+      <label>ER Potable Water Pressure</label>
+      <input id="er_potable_water_pressure" type="number" oninput="onInput(this)" />
+      <label>ER Fire Main Pressure</label>
+      <input id="er_fire_main_pressure" type="number" oninput="onInput(this)" />
+      <label>ER AMCW Pressure</label>
+      <input id="er_amcw_pressure" type="number" oninput="onInput(this)" />
+      <label>ER Air Pressure, Low</label>
+      <input id="er_air_pressure_low" type="number" oninput="onInput(this)" />
+      <label>ER Steam Pressure, Shore</label>
+      <input id="er_steam_pressure_shore" type="number" oninput="onInput(this)" />
+      <label>Shaft Seal</label>
+      <input id="shaft_seal" type="number" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+  <fieldset class="group" id="low_pressure_air_compressor">
+    <legend>Low Pressure Air Compressor</legend>
+    <div class="grid">
+      <label>LPAC Discharge Pressure</label>
+      <input id="lpac_discharge_pressure" type="number" oninput="onInput(this)" />
+      <label>LPAC Discharge Air Temperature</label>
+      <input id="lpac_discharge_air_temperature" type="number" oninput="onInput(this)" />
+      <label>LPAC Sea Water Temperature Inlet</label>
+      <input id="lpac_sea_water_temperature_inlet" type="number" oninput="onInput(this)" />
+      <label>LPAC Sea Water Temperature Outlet</label>
+      <input id="lpac_sea_water_temperature_outlet" type="number" oninput="onInput(this)" />
+      <label>LPAC Receiver Pressure</label>
+      <input id="lpac_receiver_pressure" type="number" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+  <fieldset class="group" id="dehydrators">
+    <legend>Dehydrators</legend>
+    <div class="grid">
+      <label>Dehyd Air Pressure</label>
+      <input id="dehyd_air_pressure" type="number" oninput="onInput(this)" />
+      <label>Dehyd Air Outlet Temperature</label>
+      <input id="dehyd_air_outlet_temperature" type="number" oninput="onInput(this)" />
+      <label>Dehyd Filter Differential Pressure</label>
+      <input id="dehyd_filter_differential_pressure" type="number" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+  <fieldset class="group" id="shore_power">
+    <legend>Shore Power</legend>
+    <div class="grid">
+      <label>Shore Power Amperage 1S</label>
+      <input id="shore_power_amperage_1s" type="number" oninput="onInput(this)" />
+      <label>Shore Power Amperage 2S</label>
+      <input id="shore_power_amperage_2s" type="number" oninput="onInput(this)" />
+      <label>Shore Power Amperage Total</label>
+      <input id="shore_power_amperage_total" type="number" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+  <fieldset class="group" id="fireroom_grounds">
+    <legend>Grounds</legend>
+    <div class="grid">
+      <label>1S Switchboard</label>
+      <input id="1s_switchboard" type="checkbox" class="checkmark" oninput="onInput(this)" />
+      <label>2S Switchboard</label>
+      <input id="2s_switchboard" type="checkbox" class="checkmark" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+</div>
+
+<button type="button" class="collapsible">Air Conditioning and Refrigeration</button>
+<div class="page" id="air_conditioning_refrigeration">
+  <fieldset class="group" id="air_conditioning_1">
+    <legend>Air Conditioning Unit</legend>
+    <div class="grid">
+      <label>Suction Pressure</label>
+      <input id="ac1_suction_pressure" type="number" oninput="onInput(this)" />
+      <label>Suction Temperature</label>
+      <input id="ac1_suction_temperature" type="number" oninput="onInput(this)" />
+      <label>Discharge Pressure</label>
+      <input id="ac1_discharge_pressure" type="number" oninput="onInput(this)" />
+      <label>Discharge Temperature</label>
+      <input id="ac1_discharge_temperature" type="number" oninput="onInput(this)" />
+      <label>Oil Pressure</label>
+      <input id="ac1_oil_pressure" type="number" oninput="onInput(this)" />
+      <label>Oil Level</label>
+      <input id="ac1_oil_level" type="text" oninput="onInput(this)" />
+      <label>Oil Temperature</label>
+      <input id="ac1_oil_temperature" type="number" oninput="onInput(this)" />
+      <label>Sea Water Temperature Inlet</label>
+      <input id="ac1_sea_water_temperature_inlet" type="number" oninput="onInput(this)" />
+      <label>Sea Water Temperature Outlet</label>
+      <input id="ac1_sea_water_temperature_outlet" type="number" oninput="onInput(this)" />
+      <label>Sea Water Suction Pressure</label>
+      <input id="ac1_sea_water_suction_pressure" type="number" oninput="onInput(this)" disabled />
+      <label>Sea Water Discharge Pressure</label>
+      <input id="ac1_sea_water_discharge_pressure" type="number" oninput="onInput(this)" />
+      <label>Chill Water Temperature Inlet</label>
+      <input id="ac1_chill_water_temperature_inlet" type="number" oninput="onInput(this)" />
+      <label>Chill Water Temperature Outlet</label>
+      <input id="ac1_chill_water_temperature_outlet" type="number" oninput="onInput(this)" />
+      <label>Chill Water Suction Pressure LOW</label>
+      <input id="ac1_chill_water_suction_pressure_low" type="number" oninput="onInput(this)" disabled />
+      <label>Chill Water Suction Pressure HIGH</label>
+      <input id="ac1_chill_water_suction_pressure_high" type="number" oninput="onInput(this)" />
+      <label>Chill Water Pump Discharge Pressure</label>
+      <input id="ac1_chill_water_pump_discharge_pressure" type="number" oninput="onInput(this)" />
+      <label>Chill Water System Pressure</label>
+      <input id="ac1_chill_water_system_pressure" type="number" oninput="onInput(this)" disabled />
+      <label>Chill Water Expansion Tank Level</label>
+      <input id="ac1_chill_water_expansion_tank_level" type="number" oninput="onInput(this)" />
+      <label>Chill Water Expansion Tank, Air Pressure</label>
+      <input id="ac1_chill_water_expansion_tank_air_pressure" type="number" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+  <fieldset class="group" id="air_conditioning_2">
+    <legend>Air Conditioning Unit</legend>
+    <div class="grid">
+      <label>Suction Pressure</label>
+      <input id="ac2_suction_pressure" type="number" oninput="onInput(this)" />
+      <label>Suction Temperature</label>
+      <input id="ac2_suction_temperature" type="number" oninput="onInput(this)" />
+      <label>Discharge Pressure</label>
+      <input id="ac2_discharge_pressure" type="number" oninput="onInput(this)" />
+      <label>Discharge Temperature</label>
+      <input id="ac2_discharge_temperature" type="number" oninput="onInput(this)" />
+      <label>Oil Pressure</label>
+      <input id="ac2_oil_pressure" type="number" oninput="onInput(this)" />
+      <label>Oil Level</label>
+      <input id="ac2_oil_level" type="text" oninput="onInput(this)" />
+      <label>Oil Temperature</label>
+      <input id="ac2_oil_temperature" type="number" oninput="onInput(this)" />
+      <label>Sea Water Temperature Inlet</label>
+      <input id="ac2_sea_water_temperature_inlet" type="number" oninput="onInput(this)" />
+      <label>Sea Water Temperature Outlet</label>
+      <input id="ac2_sea_water_temperature_outlet" type="number" oninput="onInput(this)" />
+      <label>Sea Water Suction Pressure</label>
+      <input id="ac2_sea_water_suction_pressure" type="number" oninput="onInput(this)" disabled />
+      <label>Sea Water Discharge Pressure</label>
+      <input id="ac2_sea_water_discharge_pressure" type="number" oninput="onInput(this)" />
+      <label>Chill Water Temperature Inlet</label>
+      <input id="ac2_chill_water_temperature_inlet" type="number" oninput="onInput(this)" />
+      <label>Chill Water Temperature Outlet</label>
+      <input id="ac2_chill_water_temperature_outlet" type="number" oninput="onInput(this)" />
+      <label>Chill Water Suction Pressure LOW</label>
+      <input id="ac2_chill_water_suction_pressure_low" type="number" oninput="onInput(this)" disabled />
+      <label>Chill Water Suction Pressure HIGH</label>
+      <input id="ac2_chill_water_suction_pressure_high" type="number" oninput="onInput(this)" />
+      <label>Chill Water Pump Discharge Pressure</label>
+      <input id="ac2_chill_water_pump_discharge_pressure" type="number" oninput="onInput(this)" />
+      <label>Chill Water System Pressure</label>
+      <input id="ac2_chill_water_system_pressure" type="number" oninput="onInput(this)" disabled />
+      <label>Chill Water Expansion Tank Level</label>
+      <input id="ac2_chill_water_expansion_tank_level" type="number" oninput="onInput(this)" />
+      <label>Chill Water Expansion Tank, Air Pressure</label>
+      <input id="ac2_chill_water_expansion_tank_air_pressure" type="number" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+  <fieldset class="group" id="refrigeration">
+    <legend>Refrigeration Plant</legend>
+    <div class="grid">
+      <label>Suction Pressure</label>
+      <input id="r_suction_pressure" type="number" oninput="onInput(this)" />
+      <label>Suction Temperature</label>
+      <input id="r_suction_temperature" type="number" oninput="onInput(this)" />
+      <label>Discharge Pressure</label>
+      <input id="r_discharge_pressure" type="number" oninput="onInput(this)" />
+      <label>Discharge Temperature</label>
+      <input id="r_discharge_temperature" type="number" oninput="onInput(this)" />
+      <label>Oil Pressure</label>
+      <input id="r_oil_pressure" type="number" oninput="onInput(this)" />
+      <label>Oil Temperature</label>
+      <input id="ac2_oil_temperature" type="number" oninput="onInput(this)" />
+      <label>Oil Level</label>
+      <input id="r_oil_level" type="text" oninput="onInput(this)" />
+      <label>Sea Water Temperature INLET</label>
+      <input id="r_sea_water_temperature_inlet" type="number" oninput="onInput(this)" disabled/>
+      <label>Sea Water Temperature OUTLET</label>
+      <input id="r_sea_water_temperature_outlet" type="number" oninput="onInput(this)" />
+      <label>Sea Water Pressure</label>
+      <input id="r_sea_water_pressure" type="number" oninput="onInput(this)" />
+      <label>Liquid Line Temperature</label>
+      <input id="r_liquid_line_temperature" type="number" oninput="onInput(this)" />
+      <label>Liquid Line Sight Flow (Clear/Bubble)</label>
+      <input id="r_liquid_line_sight_flow" type="text" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+  <fieldset class="group" id="refrigeration_box_temps">
+    <legend>Refrigerated Box Temperatures</legend>
+    <div class="grid">
+      <label>Chill Box No. 1 Temperature</label>
+      <input id="chill_box_1_temperature" type="number" oninput="onInput(this)" />
+      <label>Chill Box No. 2 Temperature</label>
+      <input id="chill_box_2_temperature" type="number" oninput="onInput(this)" />
+      <label>Freeze Box No. 1 Temperature</label>
+      <input id="freeze_box_1_temperature" type="number" oninput="onInput(this)" />
+      <label>Freeze Box No. 2 Temperature</label>
+      <input id="freeze_box_2_temperature" type="number" oninput="onInput(this)" />
+      <label>Ice Cream Box Temperature</label>
+      <input id="ice_cream_box_temperature" type="number" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+</div>
+
+<button type="button" class="collapsible">Outside Round</button>
+<div class="page" id="outside">
+  <fieldset class="group" id="space_temperatures">
+    <legend>Space Temperatures</legend>
+    <div class="grid">
+      <label>E/R Console Station Temperature</label>
+      <input id="er_console_station_temperature" type="number" oninput="onInput(this)" />
+      <label>EDG Room Area Temperature</label>
+      <input id="edg_room_area_temperature" type="number" oninput="onInput(this)" />
+      <label>E/R Temperature</label>
+      <input id="er_temperature" type="number" oninput="onInput(this)" disabled/>
+      <label>F/R Temperature</label>
+      <input id="fr_temperature" type="number" oninput="onInput(this)" disabled/>
+      <label>F/R Console Station Temperature</label>
+      <input id="fr_console_station_temperature" type="number" oninput="onInput(this)" />
+      <label>IC / Gyro Room</label>
+      <input id="ic_gyro_room" type="number" oninput="onInput(this)" />
+      <label>MSD Room No. 1 Temperature</label>
+      <input id="msd_1_temperature" type="number" oninput="onInput(this)" />
+      <label>MSD Room No. 2 Temperature</label>
+      <input id="msd_2_temperature" type="number" oninput="onInput(this)" />
+      <label>Pump Room No. 1 Temperature</label>
+      <input id="pump_room_1_temperature" type="number" oninput="onInput(this)" />
+      <label>Pump Room No. 2 Temperature</label>
+      <input id="pump_room_2_temperature" type="number" oninput="onInput(this)" />
+      <label>Pump Room No. 3 Temperature</label>
+      <input id="pump_room_3_temperature" type="number" oninput="onInput(this)" />
+      <label>Pump Room No. 4 Temperature</label>
+      <input id="pump_room_4_temperature" type="number" oninput="onInput(this)" />
+      <label>Pump Room No. 6 Temperature</label>
+      <input id="pump_room_6_temperature" type="number" oninput="onInput(this)" />
+      <label>Reefer Compressor Room Temperature</label>
+      <input id="reefer_compressor_room_temperature" type="number" oninput="onInput(this)" />
+      <label>Anchor Windlass Temperature</label>
+      <input id="anchor_windlass_temperature" type="number" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+  <fieldset class="group" id="fire_pump">
+    <legend>Fire Pump</legend>
+    <div class="grid">
+      <label>Fire Pump No.</label>
+      <input id="fire_pump_no" type="number" oninput="onInput(this)" />
+      <label>Discharge Pressure</label>
+      <input id="fire_discharge_pressure" type="number" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+  <fieldset class="group" id="outside_edg">
+    <legend>Outside Rounds / EDG</legend>
+    <div class="grid">
+      <label>EDG H.P. Air Flask</label>
+      <input id="edg_hp_air_flask" type="number" oninput="onInput(this)" />
+      <label>EDG Start Air Pressure</label>
+      <input id="edg_start_air_pressure" type="number" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+  <fieldset class="group" id="edg_grounds">
+    <legend>Grounds</legend>
+    <div class="grid">
+      <label>1E Switchboard</label>
+      <input id="1e_switchboard" type="checkbox" class="checkmark" oninput="onInput(this)" />
+    </div>
+  </fieldset>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
