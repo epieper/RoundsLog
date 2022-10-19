@@ -8,7 +8,7 @@ if (!localStorage) {
 
 getStoredInputs();
 function getStoredInputs() {
-  var inputs = document.getElementsByClassName("input");
+  var inputs = document.getElementsByTagName("input");
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].value = localStorage.getItem(inputs[i].id);
   }
