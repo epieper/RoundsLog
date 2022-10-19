@@ -59,4 +59,5 @@ for (var i = 0; i < collapsibles.length; i++) {
 
 function ClearPage() {
 	localStorage.clear();
+	getStoredInputs();
 }
