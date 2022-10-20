@@ -58,7 +58,7 @@ div.grid .checkmark {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 25px;
+  font-size: 22px;
   width: 100%;
 }
 
@@ -83,7 +83,7 @@ div.grid .checkmark {
 
 .page {
   display: none;
-  padding: 10px 20px;
+  padding: 5px 5px;
   overflow: hidden;
   background-color: #f1f1f1;
   border: 1px solid black;
