@@ -35,6 +35,7 @@ div.grid label:after {
 }
 div.grid input {
   font-size: 20px;
+  height: 24px;
 }
 
 div.grid input:disabled {
