@@ -14,15 +14,17 @@ if (!localStorage) {
 
 getStoredInputs();
 function getStoredInputs() {
+  var elements = [];
   var inputs = document.getElementsByTagName("input");
-  for (var i = 0; i < inputs.length; i++) {
-    inputs[i].value = localStorage.getItem(inputs[i].id);
+  elements.push(...inputs);
+  var selects = document.getElementsByTagName("select");
+  elements.push(...selects);
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].value = localStorage.getItem(elements[i].id);
   }
 }
 
 function onInput(input) {
-  var group = input.parentElement.parentElement;
-  var page = group.parentElement;
   localStorage.setItem(input.id, input.value);
 }
 
@@ -58,6 +60,6 @@ for (var i = 0; i < collapsibles.length; i++) {
 }
 
 function ClearPage() {
-	localStorage.clear();
-	getStoredInputs();
+  localStorage.clear();
+  getStoredInputs();
 }
