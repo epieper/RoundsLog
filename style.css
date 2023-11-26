@@ -16,11 +16,12 @@ div.grid input {
 }
 
 fieldset.group {
-  margin-bottom: 10px;
-  padding: 5px;
+  width: 100%;
+  margin-bottom: 2vw;
+  padding: 2vw;
 }
 fieldset.group legend {
-  padding: 10px;
-  font-size: 20px;
+  padding: 2vw;
+  font-size: 7vw;
   font-weight: bold;
 }
