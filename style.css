@@ -1,6 +1,6 @@
 div.grid {
   display: grid;
-  grid-template-columns: max-content 25vw;
+  grid-template-columns: max-content 20vw;
   grid-gap: 3vw;
   grid-border: solid black 1px;
 }
