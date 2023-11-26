@@ -1,18 +1,18 @@
 div.grid {
   display: grid;
-  grid-template-columns: max-content 1fr;
-  grid-gap: 2vw;
+  grid-template-columns: minmax(25vw, max-content) 1fr;
+  grid-gap: 3vw;
   grid-border: solid black 1px;
 }
 div.grid label {
   text-align: right;
-  font-size: 5vw;
+  font-size: 8vw;
 }
 div.grid label:after {
   content: ":";
 }
 div.grid input {
-  font-size: 5vw;
+  font-size: 8vw;
 }
 
 fieldset.group {
@@ -22,6 +22,6 @@ fieldset.group {
 }
 fieldset.group legend {
   padding: 1vw;
-  font-size: 7vw;
+  font-size: 9vw;
   font-weight: bold;
 }
