@@ -1,15 +1,20 @@
-html {
-  box-sizing: border-box;
+div.grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 2vw;
+  grid-border: solid black 1px;
 }
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+div.grid label {
+  text-align: right;
+  font-size: 5vw;
 }
-div.page label {
-  font-size: 22px;
-  font-weight: bold;
+div.grid label:after {
+  content: ":";
 }
+div.grid input {
+  font-size: 5vw;
+}
+
 fieldset.group {
   margin-bottom: 10px;
   padding: 5px;
@@ -18,74 +23,4 @@ fieldset.group legend {
   padding: 10px;
   font-size: 20px;
   font-weight: bold;
-}
-div.grid {
-  display: grid;
-  grid-template-columns: 200px 100px;
-  grid-gap: 5px;
-}
-div.grid label {
-  text-align: left;
-  font-size: 18px;
-  font-weight: normal;
-  border-top: 1px solid black;
-}
-div.grid label:after {
-  content: ":";
-}
-div.grid input {
-  font-size: 20px;
-  height: 24px;
-}
-
-div.grid input:disabled {
-  
-}
-
-div.grid .checkmark {
-  height: 25px;
-  width: 25px;
-}
-
-
-.collapsible {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 22px;
-  width: 100%;
-}
-
-.active,
-.collapsible:hover {
-  background-color: #555;
-}
-
-.collapsible:after {
-  content: "\003E";
-  color: white;
-  font-weight: bold;
-  float: left;
-  margin-right: 20px;
-  transform: rotate(90deg);
-}
-
-.active:after {
-  content: "\003E";
-  transform: rotate(-90deg);
-}
-
-.page {
-  display: none;
-  padding: 5px 5px;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  border: 1px solid black;
 }
