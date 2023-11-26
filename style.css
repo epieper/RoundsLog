@@ -1,7 +1,11 @@
+html {
+  padding-bottom: 25vw;
+}
+
 div.grid {
   display: grid;
-  grid-template-columns: max-content 25vw;
-  grid-gap: 3vw;
+  grid-template-columns: 45vw 25vw;
+  grid-gap: 2vw;
   grid-border: solid black 1px;
 }
 div.grid label {
@@ -16,12 +20,12 @@ div.grid input {
 }
 
 fieldset.group {
-  width: 100%;
+  width: max-content;
   margin-bottom: 2vw;
   padding: 2vw;
 }
 fieldset.group legend {
-  padding: 2vw;
-  font-size: 6vw;
+  padding: 1vw;
+  font-size: 7vw;
   font-weight: bold;
 }
