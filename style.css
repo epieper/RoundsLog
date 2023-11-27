@@ -4,7 +4,7 @@ html {
 
 div.grid {
   display: grid;
-  grid-template-columns: 45vw 25vw;
+  grid-template-columns: 48vw 25vw;
   grid-gap: 2vw;
   grid-border: solid black 1px;
 }
